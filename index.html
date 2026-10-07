@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sites que explicam e vendem pela sua empresa</title>
+<meta name="description" content="Criação de sites para pequenas e médias empresas. Eu descubro o que dizer e como mostrar o seu produto ou serviço. Converse comigo pelo WhatsApp.">
+<meta property="og:title" content="Quem visitar o seu site vai entender o que você vende?">
+<meta property="og:image" content="img/hero-desktop.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23F2A93B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1B2D;--slate:#1F3350;--amber:#F2A93B;--paper:#F7F4EE;--paper2:#ECE7DC;--gray:#D9DEE5;--ink:#1A1A1A;
+--h:'Bricolage Grotesque',system-ui,sans-serif;--b:'Atkinson Hyperlegible',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1.2rem/1.6 var(--b);color:var(--ink);background:var(--paper)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--h);line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,5.4vw,4.2rem);font-weight:800}
+h2{font-size:clamp(1.9rem,3.8vw,3rem);font-weight:800;margin-bottom:1rem}
+h3{font-size:1.35rem;font-weight:700;margin-bottom:.4rem}
+p+p{margin-top:1rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.dark{background:var(--navy);color:#fff}
+.alt{background:var(--paper2)}
+.white{background:#fff}
+.lead{max-width:62ch;font-size:1.3rem}
+.btn{display:inline-flex;align-items:center;min-height:58px;padding:0 2rem;border-radius:999px;background:var(--amber);color:var(--navy);font:700 1.2rem var(--b);text-decoration:none;box-shadow:0 10px 30px rgba(242,169,59,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.note{font-size:1rem;opacity:.85;margin-top:.9rem}
+/* hero */
+.hero{position:relative;min-height:min(92vh,760px);display:flex;align-items:center;background:var(--navy);color:#fff;overflow:hidden;padding:4rem 0}
+.hero picture,.hero img,.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero video{opacity:0;transition:opacity .4s}.hero video.on{opacity:1}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,27,45,.92) 0%,rgba(15,27,45,.7) 38%,rgba(15,27,45,0) 70%)}
+.hero .wrap{position:relative;z-index:1}
+.hero-in{max-width:600px}
+.hero p.lead{margin:1.4rem 0 2rem;color:#E6EAF0}
+.hero .more{display:inline-block;margin-left:1.4rem;font-size:1.1rem}
+/* espelho */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin:2.5rem 0}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -12px rgba(15,27,45,.25)}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.card div{padding:1.4rem 1.5rem 1.7rem}
+.card p{font-size:1.05rem;color:#3b4656;margin-top:.5rem}
+.big{font-family:var(--h);font-weight:800;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;max-width:26ch}
+/* representante */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.two img{border-radius:20px;box-shadow:0 24px 48px -12px rgba(15,27,45,.3)}
+.trio{display:grid;gap:.9rem;margin-top:1.8rem;padding:0;list-style:none}
+.trio li{padding-left:1.1rem;border-left:5px solid var(--amber)}
+.trio b{font-family:var(--h);font-size:1.3rem}
+/* demo */
+.demo{position:relative;margin:2.5rem 0 1rem;container-type:inline-size;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.demo>img{border-radius:14px;width:100%}
+.hs{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%)}
+.hs button{position:relative;width:clamp(30px,3.7cqw,46px);aspect-ratio:1;border-radius:50%;border:0;background:var(--amber);color:var(--navy);font:800 1.1rem var(--h);cursor:pointer;display:grid;place-items:center}
+.hs button:after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--amber);animation:p 2s infinite}
+@keyframes p{from{transform:scale(1);opacity:.7}to{transform:scale(1.9);opacity:0}}
+.tip{position:absolute;z-index:3;width:290px;padding:1rem 1.1rem;background:#fff;color:var(--ink);border-radius:12px;font-size:1rem;line-height:1.45;box-shadow:0 14px 40px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+.hs.open .tip{opacity:1;visibility:visible;transform:none}
+.tip b{display:block;font-family:var(--h);margin-bottom:.2rem}
+.d .tip{top:calc(100% + 14px)}.u .tip{bottom:calc(100% + 14px)}
+.tl .tip{left:-12px}.tr .tip{right:-12px}.tc .tip{left:50%;margin-left:-145px}
+.legend{display:none;padding:0;list-style:none;gap:.9rem;margin:1rem 0}
+.legend li{background:var(--slate);border-radius:12px;padding:1rem 1.2rem;font-size:1.05rem}
+.legend b{color:var(--amber)}
+.cap{font-size:1rem;opacity:.8}
+/* modelos */
+.rail{display:flex;gap:1.4rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 0 1.2rem;scrollbar-width:thin}
+.rail figure{flex:0 0 min(340px,78%);scroll-snap-align:start}
+.rail img{border-radius:16px;aspect-ratio:1;object-fit:cover;box-shadow:0 24px 48px -12px rgba(15,27,45,.3)}
+.rail figcaption{padding:1rem .3rem 0;font-size:1.05rem;color:#3b4656}
+.rail h3{color:var(--ink)}
+.nav{display:flex;gap:.7rem;margin-bottom:1.5rem}
+.nav button{width:56px;height:56px;border-radius:50%;border:2px solid var(--navy);background:#fff;font-size:1.5rem;cursor:pointer;color:var(--navy)}
+/* passos */
+.steps-img{border-radius:16px;margin:2rem 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem 1.4rem;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;font-size:1.05rem}
+.steps li:before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--amber);font:800 1rem var(--h);margin-bottom:.6rem}
+.steps b{display:block;font-family:var(--h);font-size:1.2rem;line-height:1.2;margin-bottom:.3rem}
+.steps em{display:block;margin-top:.35rem;color:#4a5566;font-style:normal}
+/* seguranca */
+.sel{border-radius:16px;margin:2rem 0 1rem;width:100%}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;font-size:1.15rem;text-align:center;font-weight:700}
+details{border-top:1px solid var(--gray);padding:1.1rem 0}
+details:last-of-type{border-bottom:1px solid var(--gray)}
+summary{cursor:pointer;font:700 1.3rem var(--h)}
+details p{margin-top:.7rem;max-width:62ch}
+.faq{margin-top:3rem;max-width:760px}
+/* fechamento */
+.close{position:relative;min-height:520px;display:flex;align-items:center;overflow:hidden}
+.close>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
+.close:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(15,27,45,.96) 0%,rgba(15,27,45,.82) 42%,rgba(15,27,45,0) 72%)}
+.close .wrap{position:relative;z-index:2}
+.close .in{max-width:520px}
+.close p{margin:1.2rem 0 2rem}
+footer{background:var(--navy);color:#B9C3D2;padding:2rem 0;font-size:1rem}
+footer a{color:#fff}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}.cards,.two{grid-template-columns:1fr}.three{grid-template-columns:1fr;text-align:left}}
+@media(max-width:720px){
+body{font-size:1.15rem}
+.hero:after{background:linear-gradient(180deg,rgba(15,27,45,.55),rgba(15,27,45,.9))}
+.hero .more{display:block;margin:1.2rem 0 0}
+.hs button{pointer-events:none}.hs .tip{display:none}.legend{display:grid}
+.close{display:block;min-height:0}.close>img{position:static;height:300px}.close:before{display:none}
+.close .wrap{background:var(--navy);width:100%;padding:2.5rem 1.25rem}
+}
+@media(prefers-reduced-motion:reduce){.hs button:after{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width:720px)" srcset="img/hero-mobile.webp">
+    <img src="img/hero-desktop.webp" alt="">
+  </picture>
+  <video id="hv" muted playsinline preload="none" aria-hidden="true"></video>
+  <div class="wrap"><div class="hero-in">
+    <h1>Quem visitar o seu site vai entender o que você vende?</h1>
+    <p class="lead">Cores, formas, imagens e textos bem combinados fazem um site trabalhar como um vendedor: apresenta sua empresa, mostra o que você oferece e leva o cliente a chamar você.</p>
+    <a class="btn wa" href="https://wa.me/5511949456445?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20o%20site%20da%20minha%20empresa.">Quero conversar</a><a class="more" href="#espelho">Veja como isso funciona</a>
+    <p class="note">Conversa sem compromisso, pelo WhatsApp.</p>
+  </div></div>
+</header>
+
+<main>
+<section id="espelho"><div class="wrap">
+  <h2>Isso acontece com você?</h2>
+  <div class="cards">
+    <article class="card"><img src="img/espelho-busca.webp" alt="Mão segurando um celular com resultados de busca: a empresa sem site aparece vazia, a concorrente aparece completa" loading="lazy"><div><h3>Alguém te indica. Antes de ligar, o cliente pesquisa seu nome no Google.</h3><p>Se ele encontra pouco ou nada, a confiança que a indicação trouxe começa a esfriar.</p></div></article>
+    <article class="card"><img src="img/espelho-noite.webp" alt="Pessoa à noite no sofá, olhando o celular" loading="lazy"><div><h3>São 10 da noite e alguém procura o que você faz.</h3><p>Seu telefone está desligado. O concorrente que tem site está ali, explicando o serviço dele.</p></div></article>
+    <article class="card"><img src="img/espelho-cartoes.webp" alt="Dois cartões lado a lado: um vazio, só com telefone, outro completo com foto, estrelas e botão" loading="lazy"><div><h3>Dois serviços parecidos. Um mostra fotos, explica e passa segurança. O outro só tem um número de telefone.</h3><p>Quem parece mais sério leva a ligação.</p></div></article>
+  </div>
+  <p class="big">Seu trabalho pode ser excelente. Mas o cliente só escolhe o que consegue enxergar.</p>
+</div></section>
+
+<section class="alt" id="representante"><div class="wrap two">
+  <div>
+    <h2>O site é o seu representante comercial</h2>
+    <p>Você sabe como é ter um bom vendedor. Ele apresenta a empresa, explica o produto, responde as dúvidas mais comuns e convida o cliente a fechar.</p>
+    <p>Um site bem construído faz o mesmo. Só que 24 horas por dia, sem folga, sem esquecer de dizer o que importa e sempre mostrando sua empresa do melhor jeito.</p>
+    <ul class="trio">
+      <li><b>Apresenta</b> quem você é.</li>
+      <li><b>Explica</b> o que você vende.</li>
+      <li><b>Convida</b> o cliente a falar com você.</li>
+    </ul>
+  </div>
+  <img src="img/representante.webp" alt="Notebook com um site no ar, cercado por um relógio de 24 horas, metade dia e metade noite" loading="lazy">
+</div></section>
+
+<section class="dark" id="demonstracao"><div class="wrap">
+  <h2>Veja por dentro: o que cada parte de um site faz</h2>
+  <p class="lead">Este é um site de exemplo, de uma empresa de manutenção industrial. Toque nos pontos dourados e veja o que cada parte faz pelo negócio.</p>
+  <div class="demo">
+    <img src="img/demo-site.webp" alt="Site de exemplo de uma empresa de manutenção industrial, com quatro pontos numerados" loading="lazy">
+    <div class="hs d tl" style="--x:41.2%;--y:28.4%"><button aria-expanded="false" aria-label="Ponto 1">1</button><div class="tip"><b>O título</b>Em 5 segundos o visitante precisa entender o que a empresa faz e para quem. Se ele não entende, vai embora.</div></div>
+    <div class="hs d tc" style="--x:34.1%;--y:48.3%"><button aria-expanded="false" aria-label="Ponto 2">2</button><div class="tip"><b>O botão de orçamento</b>Um caminho claro: depois de entender, o cliente sabe exatamente o que fazer para pedir um orçamento.</div></div>
+    <div class="hs d tl" style="--x:20.1%;--y:62.1%"><button aria-expanded="false" aria-label="Ponto 3">3</button><div class="tip"><b>Serviços e fotos</b>Aqui o cliente vê o trabalho. Foto real e explicação simples valem mais que qualquer propaganda.</div></div>
+    <div class="hs u tr" style="--x:84.1%;--y:83.1%"><button aria-expanded="false" aria-label="Ponto 4">4</button><div class="tip"><b>O botão de conversa</b>Sempre à mão. Um toque e o cliente está falando com você no WhatsApp.</div></div>
+  </div>
+  <ol class="legend">
+    <li><b>1. O título.</b> Em 5 segundos o visitante precisa entender o que a empresa faz e para quem. Se ele não entende, vai embora.</li>
+    <li><b>2. O botão de orçamento.</b> Um caminho claro: depois de entender, o cliente sabe exatamente o que fazer para pedir um orçamento.</li>
+    <li><b>3. Serviços e fotos.</b> Aqui o cliente vê o trabalho. Foto real e explicação simples valem mais que qualquer propaganda.</li>
+    <li><b>4. O botão de conversa.</b> Sempre à mão. Um toque e o cliente está falando com você no WhatsApp.</li>
+  </ol>
+  <p class="cap">Site de exemplo, de empresa fictícia.</p>
+  <p class="big" style="margin-top:2.5rem">O mesmo raciocínio vale para o seu negócio. Eu descubro o que dizer e como mostrar. Você não precisa saber isso.</p>
+  <p style="margin-top:1rem;max-width:62ch;color:#C9D2DF">Em um site completo entram também o tempo de empresa, os clientes atendidos e os trabalhos feitos. É o que responde à pergunta do cliente: "será que posso confiar?".</p>
+</div></section>
+
+<section id="modelos"><div class="wrap">
+  <h2>Que tipo de site combina com o seu negócio?</h2>
+  <p class="lead">Cada negócio vende de um jeito. Veja alguns caminhos:</p>
+  <div class="rail" id="rail" tabindex="0" aria-label="Tipos de site">
+    <figure><img src="img/modelo-vitrine.webp" alt="Tablet com uma vitrine de trabalhos em fotos" loading="lazy"><figcaption><h3>Vitrine de trabalhos</h3>Para quem tem obras, produtos ou resultados bonitos de mostrar. Fotos grandes e bem organizadas.</figcaption></figure>
+    <figure><img src="img/modelo-explica.webp" alt="Celular com um serviço explicado em passos" loading="lazy"><figcaption><h3>Explica o serviço</h3>Para quem vende algo que o cliente precisa entender antes de decidir. Passo a passo claro e dúvidas respondidas.</figcaption></figure>
+    <figure><img src="img/modelo-cartao.webp" alt="Celular com um cartão de visitas digital, botões de ligar, WhatsApp e mapa" loading="lazy"><figcaption><h3>Cartão de visitas turbinado</h3>Para quem quer ser encontrado e chamado de forma simples e rápida. Apresentação, contatos e localização.</figcaption></figure>
+    <figure><img src="img/modelo-catalogo.webp" alt="Notebook com um catálogo de produtos e botões de pedir orçamento" loading="lazy"><figcaption><h3>Catálogo de produtos</h3>Para quem tem vários itens e quer que o cliente veja tudo antes de pedir orçamento.</figcaption></figure>
+    <figure><img src="img/modelo-oferta.webp" alt="Notebook e celular mostrando uma página com uma única oferta e um botão" loading="lazy"><figcaption><h3>Página de uma oferta</h3>Para divulgar um serviço ou promoção específica, com um único objetivo: o cliente chamar.</figcaption></figure>
+  </div>
+  <div class="nav"><button id="prev" aria-label="Anterior">&#8249;</button><button id="next" aria-label="Próximo">&#8250;</button></div>
+  <p class="big">Não sabe qual é o seu? É normal. Descobrimos juntos na primeira conversa.</p>
+</div></section>
+
+<section class="alt" id="como-funciona"><div class="wrap">
+  <h2>Como funciona: você não precisa saber o que pedir</h2>
+  <img class="steps-img" src="img/passos.webp" alt="Oito etapas ligadas por uma linha pontilhada, da conversa inicial à publicação" loading="lazy">
+  <ol class="steps">
+    <li><b>Conversamos</b> sobre o seu negócio.<em>Seu papel: contar como você trabalha.</em></li>
+    <li><b>Descobrimos</b> o que o seu cliente procura.<em>Seu papel: me dizer quem são seus melhores clientes.</em></li>
+    <li><b>Escolhemos</b> o que destacar.<em>Seu papel: apontar o que mais orgulha você.</em></li>
+    <li><b>Definimos</b> o tipo de site, as cores e o estilo.<em>Seu papel: gostar ou não do que eu mostrar.</em></li>
+    <li><b>Escrevo</b> os textos, em linguagem simples.<em>Seu papel: conferir se está com a sua cara.</em></li>
+    <li><b>Monto</b> a primeira versão.<em>Seu papel: aguardar.</em></li>
+    <li><b>Você revisa</b> e pede os ajustes.<em>Seu papel: dizer o que mudar.</em></li>
+    <li><b>Publicamos.</b><em>Seu papel: receber seus novos clientes.</em></li>
+  </ol>
+</div></section>
+
+<section class="white" id="seguranca"><div class="wrap">
+  <h2>Sem pressa, sem susto</h2>
+  <img class="sel" src="img/selos.webp" alt="Três selos: aprovado, protegido e conversa" loading="lazy">
+  <div class="three"><p>Você aprova cada etapa.</p><p>Nada vai ao ar sem o seu OK.</p><p>A primeira conversa não obriga a nada.</p></div>
+  <div class="faq">
+    <h3 style="font-size:1.6rem;margin-bottom:1rem">Perguntas que todo mundo faz</h3>
+    <details><summary>Não entendo nada de tecnologia.</summary><p>Não precisa. Eu explico em português simples, e você só decide.</p></details>
+    <details><summary>Quanto tempo leva?</summary><p>Depende do tipo de site. Na primeira conversa eu passo o prazo certo para o seu caso.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você vê a primeira versão antes de publicar e pede os ajustes.</p></details>
+  </div>
+</div></section>
+
+<section class="dark close" id="contato">
+  <img src="img/fechamento.webp" alt="Rua à noite com comércios iluminados e uma mão segurando o celular" loading="lazy">
+  <div class="wrap"><div class="in">
+    <h2>Seu próximo cliente já está pesquisando.</h2>
+    <p class="lead">Vamos conversar sobre como o seu negócio pode aparecer do jeito certo?</p>
+    <a class="btn wa" href="https://wa.me/5511949456445?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20o%20site%20da%20minha%20empresa.">Chamar no WhatsApp</a>
+  </div></div>
+</section>
+</main>
+
+<footer><div class="wrap">Alexsander Teixeira da Silva · Mauá, SP · WhatsApp <a href="https://wa.me/5511949456445">(11) 94945-6445</a></div></footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// Hero: o vídeo só roda em telas grandes e sem "reduzir movimento"; ao final fica no último quadro.
+const v=$('#hv');
+if(matchMedia('(min-width:721px) and (prefers-reduced-motion:no-preference)').matches){
+  v.src='video/hero.mp4';v.addEventListener('playing',()=>v.classList.add('on'));v.play().catch(()=>{});
+}
+// Pontos da demonstração
+const close=()=>$$('.hs.open').forEach(h=>{h.classList.remove('open');h.firstElementChild.setAttribute('aria-expanded','false')});
+$$('.hs').forEach(h=>h.firstElementChild.addEventListener('click',e=>{
+  e.stopPropagation();const was=h.classList.contains('open');close();
+  if(!was){h.classList.add('open');h.firstElementChild.setAttribute('aria-expanded','true')}
+}));
+document.addEventListener('click',close);
+document.addEventListener('keydown',e=>e.key==='Escape'&&close());
+const first=$('.hs');if(first&&innerWidth>720){first.classList.add('open');first.firstElementChild.setAttribute('aria-expanded','true')}
+// Carrossel
+const rail=$('#rail');
+$('#prev').onclick=()=>rail.scrollBy({left:-rail.clientWidth*.8,behavior:'smooth'});
+$('#next').onclick=()=>rail.scrollBy({left:rail.clientWidth*.8,behavior:'smooth'});
+</script>
+</body>
+</html>
