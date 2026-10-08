@@ -235,7 +235,7 @@ body{font-size:1.15rem}
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 // Hero: o vídeo só roda em telas grandes e sem "reduzir movimento"; ao final fica no último quadro.
 const v=$('#hv');
-if(matchMedia('(min-width:721px) and (prefers-reduced-motion:no-preference)').matches){
+if(matchMedia('(prefers-reduced-motion:no-preference)').matches){
   v.src='video/hero.mp4';v.addEventListener('playing',()=>v.classList.add('on'));v.play().catch(()=>{});
 }
 // Pontos da demonstração
